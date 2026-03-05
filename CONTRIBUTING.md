@@ -37,6 +37,35 @@ Version: 1.2.0
 
 The tag name (`v1.2.0`) and the header value (`1.2.0`) must match — the Plugin Update Checker uses this header to detect available updates.
 
+## Release
+
+Use this checklist for every release:
+
+1. Pull the latest `main`.
+2. Update `Version` in `style.css` to the target version.
+3. Run:
+
+```bash
+composer run lint:run
+```
+
+4. Commit:
+
+```bash
+git add style.css
+git commit -m "Release vX.Y.Z"
+```
+
+5. Create and push tag:
+
+```bash
+git tag vX.Y.Z
+git push origin main
+git push origin vX.Y.Z
+```
+
+6. Create a GitHub Release from `vX.Y.Z` and publish release notes.
+
 ## Release Notes
 
 When tagging a release (`vX.X.X`), group changes under:
