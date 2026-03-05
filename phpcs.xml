@@ -31,6 +31,33 @@
         <severity>0</severity>
     </rule>
 
+    <!-- Cyclomatic complexity ≤ 10 -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+            <property name="complexity" value="10"/>
+            <property name="absoluteComplexity" value="20"/>
+        </properties>
+    </rule>
+
+    <!-- Max nesting depth 3 -->
+    <rule ref="Generic.Metrics.NestingLevel">
+        <properties>
+            <property name="nestingLevel" value="3"/>
+            <property name="absoluteNestingLevel" value="5"/>
+        </properties>
+    </rule>
+
+    <!-- No commented-out code -->
+    <rule ref="Squiz.PHP.CommentedOutCode">
+        <properties>
+            <property name="maxPercentage" value="35"/>
+        </properties>
+    </rule>
+
+    <!-- No TODO/FIXME comments -->
+    <rule ref="Generic.Commenting.Todo"/>
+    <rule ref="Generic.Commenting.Fixme"/>
+
     <!-- Ignore vendor, build, and scripts (e.g. security scan) -->
     <exclude-pattern>vendor/*</exclude-pattern>
     <exclude-pattern>build/*</exclude-pattern>
