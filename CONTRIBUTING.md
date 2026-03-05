@@ -27,6 +27,16 @@ Checklist of steps to verify the changes work correctly.
 - Keep it concise — reviewers should understand the PR in under 30 seconds.
 - Reference related issue numbers when available.
 
+## Versioning
+
+Before tagging a release, update the `Version` header in `style.css` to match the release tag (without the `v` prefix):
+
+```
+Version: 1.2.0
+```
+
+The tag name (`v1.2.0`) and the header value (`1.2.0`) must match — the Plugin Update Checker uses this header to detect available updates.
+
 ## Release Notes
 
 When tagging a release (`vX.X.X`), group changes under:
