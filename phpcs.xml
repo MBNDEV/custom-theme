@@ -26,7 +26,6 @@
             <property name="indent" value="2"/>
         </properties>
     </rule>
-    <exclude name="WordPress.WhiteSpace.PrecisionAlignment"/>
     <rule ref="Universal.WhiteSpace.PrecisionAlignment">
         <severity>0</severity>
     </rule>
