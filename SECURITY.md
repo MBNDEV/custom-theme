@@ -8,7 +8,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in this plugin, please report it responsibly.
+If you discover a security vulnerability in this theme, please report it responsibly.
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
@@ -23,7 +23,7 @@ We will acknowledge your report within 48 hours and provide an estimated timelin
 
 ## Security Standards
 
-This plugin enforces the following security practices through automated linting (`composer run lint`) and code review:
+This theme enforces the following security practices through automated linting (`composer run lint`) and code review:
 
 ### Input Sanitization
 
