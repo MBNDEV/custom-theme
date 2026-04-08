@@ -6,7 +6,7 @@ alwaysApply: true
 
 # WordPress Theme Coding Standards
 
-This is a WordPress theme. All PHP must pass `composer run lint` (PHPCS with WordPress-Core, WordPress-Extra, WordPress-Docs).
+This is a WordPress theme. All PHP must pass `composer run lint` only do this after all edits have been made (PHPCS with WordPress-Core, WordPress-Extra, WordPress-Docs).
 
 ## Naming
 
