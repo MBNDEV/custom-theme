@@ -14,11 +14,12 @@
   "scripts": {
     "lint": "phpcs",
     "lint:fix": "phpcbf",
+    "format": "@lint:fix",
     "lint:security": "@php scripts/security-scan.php",
     "lint:run": [
       "@lint:security",
-      "@lint:fix",
-      "@lint:fix",
+      "@format",
+      "@format",
       "@lint"
     ]
   }

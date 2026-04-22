@@ -17,7 +17,9 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<?php if ( is_active_sidebar( 'header' ) ) : ?>
-			<?php dynamic_sidebar( 'header' ); ?>
-		<?php endif; ?>
+		<?php
+		// Output Header Template block content.
+		$header_html = custom_theme_get_global_header_template_output_html();
+		echo $header_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- block editor content
+		?>
 	</header>

@@ -7,9 +7,11 @@
 
 ?>
 	<footer id="colophon" class="site-footer">
-		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
-			<?php dynamic_sidebar( 'footer' ); ?>
-		<?php endif; ?>
+		<?php
+		// Output Footer Template block content.
+		$footer_html = custom_theme_get_global_footer_template_output_html();
+		echo $footer_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- block editor content
+		?>
 	</footer>
 </div>
 <?php wp_footer(); ?>

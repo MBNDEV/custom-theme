@@ -1,0 +1,9 @@
+/**
+ * Tailwind entry (utilities live in block render templates and theme PHP).
+ *
+ * @package CustomTheme
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
