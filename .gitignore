@@ -1,0 +1,10 @@
+node_modules/
+
+.cursor/
+.vscode/
+build/
+*.hot-update.js
+*.hot-update.json
+.DS_Store
+
+/docs

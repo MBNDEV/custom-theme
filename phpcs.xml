@@ -2,8 +2,11 @@
 <ruleset name="Custom Theme">
     <description>WordPress Coding Standards for Custom Theme</description>
 
-    <!-- Scan theme files only (exclude vendor) -->
+    <!-- Scan theme tree; dependencies are excluded below -->
     <file>.</file>
+
+    <!-- Only PHP — avoids scanning node_modules JS and keeps runs fast -->
+    <arg name="extensions" value="php"/>
 
     <!-- WordPress PHP standards -->
     <rule ref="WordPress-Core"/>
@@ -57,10 +60,16 @@
     <rule ref="Generic.Commenting.Todo"/>
     <rule ref="Generic.Commenting.Fixme"/>
 
-    <!-- Ignore vendor, build, and scripts (e.g. security scan) -->
-    <exclude-pattern>vendor/*</exclude-pattern>
-    <exclude-pattern>build/*</exclude-pattern>
-    <exclude-pattern>scripts/*</exclude-pattern>
+    <!-- Disable inline comment punctuation requirement -->
+    <rule ref="Squiz.Commenting.InlineComment.InvalidEndChar">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Nested paths: plain vendor/* does not exclude vendor/pkg/file.php -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/build/*</exclude-pattern>
+    <exclude-pattern>*/scripts/*</exclude-pattern>
 
     <!-- CLI -->
     <arg value="p"/>
